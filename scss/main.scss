@@ -7,3 +7,18 @@ $font-weights:(
     "bold": 800
 );
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
