@@ -43,7 +43,7 @@ li {
   -webkit-box-shadow: 0px 5px 10px 0px #cfcfcf;
           box-shadow: 0px 5px 10px 0px #cfcfcf;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .header .header__logo {
   width: 200px;
@@ -59,40 +59,40 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4rem;
+  height: 4.5rem;
   background-color: #F2F2F2;
 }
 .search i {
   font-size: 2rem;
+  margin: 0 0 0.5rem 3.5rem;
 }
 .search input {
   border: none;
   background-color: #F2F2F2;
   width: 250px;
   height: 40px;
+  text-indent: 1rem;
+}
+.search input:focus {
+  margin-left: 0.5rem;
 }
 .search input::-webkit-input-placeholder {
   color: black;
-  padding-left: 1rem;
   font-size: 1.5rem;
 }
 .search input::-moz-placeholder {
   color: black;
-  padding-left: 1rem;
   font-size: 1.5rem;
 }
 .search input:-ms-input-placeholder {
   color: black;
-  padding-left: 1rem;
   font-size: 1.5rem;
 }
 .search input::-ms-input-placeholder {
   color: black;
-  padding-left: 1rem;
   font-size: 1.5rem;
 }
 .search input::placeholder {
   color: black;
-  padding-left: 1rem;
   font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
