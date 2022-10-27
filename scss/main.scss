@@ -71,5 +71,10 @@ $font-weights:(
         font-size: 1.5rem;
       }
     } 
-    
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 24px;
 }

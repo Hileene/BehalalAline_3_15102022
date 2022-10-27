@@ -95,4 +95,15 @@ li {
 .search input::placeholder {
   color: black;
   font-size: 1.5rem;
+}
+
+.main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 24px;
 }/*# sourceMappingURL=main.css.map */
