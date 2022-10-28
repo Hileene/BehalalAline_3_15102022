@@ -34,6 +34,7 @@ $font-weights:(
     "medium": 500,
     "bold": 800
 );
+$section-padding: 50px 32px 60px 32px;
 
 .header {
     display: flex;
@@ -79,7 +80,7 @@ $font-weights:(
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding: 50px 32px 60px 32px;
+    padding: $section-padding;
     background-color: $cd-bg-grey;
     #{&}__intro  h1 {
        font-size: 28px;
@@ -111,4 +112,8 @@ $font-weights:(
         color: white;
         background:rgba(68, 52, 86, 0.722);
     }
+}
+
+.operation {
+    padding: $section-padding;
 }
