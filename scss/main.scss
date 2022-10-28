@@ -117,18 +117,28 @@ $section-padding: 50px 32px 60px 32px;
 .operation {
     padding: $section-padding;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90rem;
     #{&}__title {
         margin-top: 9px;
+        display: flex;
+        flex-basis:100%;
     }
     #{&}__btn {
         display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 50rem;
+        height: 6rem;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
         position: relative;
         margin: 25px 0 25px 12px;
         padding: 25px 0;
-        border-radius: 24px;
+        border-radius: 30px;
         cursor: pointer;
         background: $cd-bg-grey;
         box-shadow: 0px 5px 10px 0px #cfcfcf;
@@ -156,12 +166,11 @@ $section-padding: 50px 32px 60px 32px;
 @media (min-width: 768px) {
     .operation {
        display: flex;
-       flex-direction: row;
-        justify-content: space-evenly;
+       justify-content: space-evenly;
         #{&}__btn {
             display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+            width: 60%
+            
 
         }
     }
