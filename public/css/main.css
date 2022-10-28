@@ -106,11 +106,13 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 32px 80px 32px;
-  border: 1px solid;
+  padding: 50px 32px 60px 32px;
   background-color: #f7f7f7;
 }
 .main-title .main-title__intro h1 {
@@ -126,6 +128,25 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  width: 220px;
+  height: 55px;
+  margin: 20px auto;
+  border-radius: 40px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    color: white;
+    background: rgba(68, 52, 86, 0.722);
+  }
 }/*# sourceMappingURL=main.css.map */

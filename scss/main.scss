@@ -77,9 +77,9 @@ $font-weights:(
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     justify-content: center;
-    padding: 50px 32px 80px 32px;
-    border: 1px solid; 
+    padding: 50px 32px 60px 32px;
     background-color: $cd-bg-grey;
     #{&}__intro  h1 {
        font-size: 28px;
@@ -92,6 +92,23 @@ $font-weights:(
     #{&}__btn {
         background: $cd-secondary;
         display: flex;
-        flex-basis: 50%;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 220px;
+        height: 55px;
+        margin: 20px auto;
+        border-radius: 40px;
+        white-space: nowrap;
+        cursor: pointer;
+        padding: 10px;
+        
+    }
+}
+
+@media (min-width: 768px){
+    .main-title {
+        color: white;
+        background:rgba(68, 52, 86, 0.722);
     }
 }
