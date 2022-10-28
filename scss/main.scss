@@ -154,5 +154,15 @@ $section-padding: 50px 32px 60px 32px;
 }
 
 @media (min-width: 768px) {
-    
+    .operation {
+       display: flex;
+       flex-direction: row;
+        justify-content: space-evenly;
+        #{&}__btn {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+    }
 }
