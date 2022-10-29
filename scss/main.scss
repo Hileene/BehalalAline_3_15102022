@@ -34,7 +34,7 @@ $font-weights:(
     "medium": 500,
     "bold": 800
 );
-$section-padding: 50px 32px 60px 32px;
+$section-padding: 40px 32px 40px 32px;
 
    
 .header {
@@ -171,7 +171,11 @@ $section-padding: 50px 32px 60px 32px;
     .operation {
       display:flex;
       flex-wrap: wrap;
-      padding: 50px 0 60px 0;
+      padding: 40px 0;
+
+      #{&}__title {
+        margin: 0 35px 10px;
+      }
       #{&}-container__btn {
         display: flex;
         flex-wrap:wrap;
@@ -184,4 +188,3 @@ $section-padding: 50px 32px 60px 32px;
     }
    
   }
-    
