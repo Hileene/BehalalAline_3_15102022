@@ -260,3 +260,27 @@ $section-padding: 40px 32px 40px 32px;
         }
     }
 }
+
+@media (min-width: 768px) {
+    .restaurants {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        #{&}-container__cards {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        #{&}__card {
+            width: 20rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .restaurants__card {
+        width: 15rem;
+    }
+
+}
+
