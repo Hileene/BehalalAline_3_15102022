@@ -285,9 +285,12 @@ li {
   border-radius: 20px;
   width: 100%;
   background: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 .restaurants .restaurants__img {
-  height: 175px;
+  height: 230px;
   border-radius: 20px 20px 0 0;
 }
 .restaurants .restaurants__tag {
@@ -296,7 +299,22 @@ li {
   font-weight: 500;
   padding: 0.7rem 1.5rem;
   border-radius: 0.3rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.05rem;
+}
+.restaurants .restaurants__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  top: -9.75rem;
-  left: 17.05rem;
+  width: 100%;
+  height: 4rem;
+  padding: 8px 0 8px 15px;
 }/*# sourceMappingURL=main.css.map */
