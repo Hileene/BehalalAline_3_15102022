@@ -284,14 +284,19 @@ li {
   margin-top: 20px;
   border-radius: 20px;
   width: 100%;
+  background: white;
 }
 .restaurants .restaurants__img {
   height: 175px;
   border-radius: 20px 20px 0 0;
 }
 .restaurants .restaurants__tag {
-  border: 1px solid;
   background: #71d8be;
   color: #166350;
   font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  position: relative;
+  top: -9.75rem;
+  left: 17.05rem;
 }/*# sourceMappingURL=main.css.map */
