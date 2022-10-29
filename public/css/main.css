@@ -220,6 +220,9 @@ li {
   margin: 0 2rem 0 1.5rem;
   color: #646464;
 }
+.operation .operation__btn__text {
+  font-weight: 500;
+}
 
 @media (min-width: 768px) {
   .operation {
@@ -246,4 +249,7 @@ li {
   .operation .operation__btn {
     width: 20rem;
   }
+}
+.restaurants {
+  background: #f7f7f7;
 }/*# sourceMappingURL=main.css.map */

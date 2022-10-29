@@ -164,6 +164,9 @@ $section-padding: 40px 32px 40px 32px;
         margin: 0 2rem 0 1.5rem;
         color: #646464;;
     }
+    #{&}__btn__text {
+        font-weight: map-get($font-weights, medium);
+    }
     
 }
 
@@ -187,4 +190,8 @@ $section-padding: 40px 32px 40px 32px;
     }
     }
    
+  }
+
+  .restaurants {
+    background: $cd-bg-grey;
   }
