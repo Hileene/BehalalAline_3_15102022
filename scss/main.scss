@@ -193,5 +193,37 @@ $section-padding: 40px 32px 40px 32px;
   }
 
   .restaurants {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: $section-padding;
     background: $cd-bg-grey;
+    border: 1px solid black;
+    #{&}-container__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 16px;
+        gap: 10px;
+        border: 1px solid green;
+    }
+    #{&}__card {
+        border: 1px solid red;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 100%;
+    }
+    #{&}__img {
+        height: 175px;
+        border-radius: 20px 20px 0 0;
+    }
+    #{&}__tag {
+        border: 1px solid;
+        background: #71d8be;
+        color: #166350;
+        font-weight: map-get($font-weights, medium);
+        
+    }
   }
