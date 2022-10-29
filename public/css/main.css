@@ -280,7 +280,6 @@ li {
   border: 1px solid green;
 }
 .restaurants .restaurants__card {
-  border: 1px solid red;
   margin-top: 20px;
   border-radius: 20px;
   width: 100%;
@@ -315,6 +314,28 @@ li {
           align-items: center;
   position: relative;
   width: 100%;
-  height: 4rem;
-  padding: 8px 0 8px 15px;
+  height: 5rem;
+  padding: 0 16px;
+}
+.restaurants .restaurants__content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+  gap: 7px;
+}
+.restaurants .restaurants__content__title {
+  margin: 0;
+}
+.restaurants .restaurants__content__location {
+  margin: 0;
+}
+.restaurants .restaurants__content__heart {
+  padding: 10px 16px 0 0;
+  font-size: 25px;
+  color: #5b5b5b;
 }/*# sourceMappingURL=main.css.map */
