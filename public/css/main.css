@@ -403,9 +403,10 @@ li {
 .footer .footer__title {
   font-family: "Shrikhand", sans-serif;
   font-weight: 200;
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 30px;
 }
-.footer .footer__links {
+.footer .footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,9 +414,50 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 15px;
 }
-.footer .footer__icons {
-  font-size: 1rem;
-  font-weight: 200;
+.footer .footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .footer .footer__title {
+    font-size: 2.5rem;
+  }
+  .footer .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 70%;
+  }
+  .footer .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */
