@@ -34,7 +34,7 @@ $font-weights:(
     "medium": 500,
     "bold": 800
 );
-$section-padding: 40px 32px 40px 32px;
+$section-padding: 36px 20px;
 
    
 .header {
@@ -124,6 +124,9 @@ $section-padding: 40px 32px 40px 32px;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
+    #{&}__title{
+        margin:0;
+    }
 
     #{&}-container__btn {
         display: flex;
@@ -174,15 +177,12 @@ $section-padding: 40px 32px 40px 32px;
     .operation {
       display:flex;
       flex-wrap: wrap;
-      padding: 40px 0;
 
-      #{&}__title {
-        margin: 0 35px 10px;
-      }
       #{&}-container__btn {
         display: flex;
         flex-wrap:wrap;
         justify-content: space-evenly;
+        gap: 20px;
     }
        #{&}__btn {
         width: 20rem;
@@ -199,7 +199,10 @@ $section-padding: 40px 32px 40px 32px;
     width: 100%;
     padding: $section-padding;
     background: $cd-bg-grey;
-    border: 1px solid black;
+    
+    #{&}__title {
+        margin: 0;
+    }
 
     #{&}-container__cards {
         display: flex;
@@ -208,7 +211,6 @@ $section-padding: 40px 32px 40px 32px;
         width: 100%;
         margin-bottom: 16px;
         gap: 10px;
-        border: 1px solid green;
     }
     #{&}__card {
         margin-top: 20px;
@@ -254,9 +256,12 @@ $section-padding: 40px 32px 40px 32px;
             margin: 0;
         }
         &__heart {
-            padding: 10px 16px 0 0;
+            padding: 11px 16px 0 0;
             font-size: 25px;
             color: #5b5b5b;
+            position: absolute;
+            right: 1rem;
+            top: 0;
         }
     }
 }
@@ -277,10 +282,22 @@ $section-padding: 40px 32px 40px 32px;
     }
 }
 
-@media (min-width: 1200px) {
-    .restaurants__card {
-        width: 15rem;
+@media (min-width: 1280px) {
+    .restaurants {
+        display: flex;
+        width: 100%;
+        #{&}-container__cards {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            gap: 35px;
+        }
+        #{&}__card {
+            width: 18rem;
+            max-width: 20rem;
+        }
     }
+    
 
 }
 
