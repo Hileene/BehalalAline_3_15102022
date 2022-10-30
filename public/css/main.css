@@ -147,12 +147,6 @@ li {
   padding: 10px;
 }
 
-@media (min-width: 768px) {
-  .main-title {
-    color: white;
-    background: rgba(68, 52, 86, 0.722);
-  }
-}
 .operation {
   padding: 36px 20px;
   display: -webkit-box;
