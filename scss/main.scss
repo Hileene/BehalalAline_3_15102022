@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -29,14 +30,14 @@ $cd-primary: #9356DC;
 $cd-secondary: #FF79DA;
 $cd-tertiary: #99E2D0;
 $cd-bg-grey: #f7f7f7;
-$font-weights:(
+$font-weights: (
     "regular": 200,
     "medium": 500,
     "bold": 800
 );
 $section-padding: 36px 20px;
 
-   
+
 .header {
     display: flex;
     justify-content: center;
@@ -46,8 +47,9 @@ $section-padding: 36px 20px;
     top: 0;
     background: white;
     z-index: 1;
+
     #{&}__logo {
-       width: 200px;
+        width: 200px;
     }
 }
 
@@ -58,24 +60,28 @@ $section-padding: 36px 20px;
     align-items: center;
     height: 4.5rem;
     background-color: #f0efef;
+
     i {
-       font-size: 2rem;
-       margin: 0 0 0.5rem 3.5rem;
-    } 
+        font-size: 2rem;
+        margin: 0 0 0.5rem 3.5rem;
+    }
+
     input {
-      border: none;
-      background-color:#f0efef; 
-      width: 250px;
-      height: 40px;
-      text-indent: 1rem;
-      &:focus {
-        margin-left: 0.5rem;
-      }
-      &::placeholder {
-        color: black;
-        font-size: 1.5rem;
-      }
-    } 
+        border: none;
+        background-color: #f0efef;
+        width: 250px;
+        height: 40px;
+        text-indent: 1rem;
+
+        &:focus {
+            margin-left: 0.5rem;
+        }
+
+        &::placeholder {
+            color: black;
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .main-title {
@@ -86,14 +92,17 @@ $section-padding: 36px 20px;
     justify-content: center;
     padding: $section-padding;
     background-color: $cd-bg-grey;
-    #{&}__intro  h1 {
-       font-size: 28px;
+
+    #{&}__intro h1 {
+        font-size: 28px;
     }
+
     #{&}__intro-plus {
         font-size: 18px;
         font-weight: map-get($font-weights, regular);
         margin-bottom: 32px;
     }
+
     #{&}__btn {
         background: $cd-secondary;
         display: flex;
@@ -107,14 +116,14 @@ $section-padding: 36px 20px;
         white-space: nowrap;
         cursor: pointer;
         padding: 10px;
-        
+
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .main-title {
         color: white;
-        background:rgba(68, 52, 86, 0.722);
+        background: rgba(68, 52, 86, 0.722);
     }
 }
 
@@ -124,8 +133,9 @@ $section-padding: 36px 20px;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    #{&}__title{
-        margin:0;
+
+    #{&}__title {
+        margin: 0;
     }
 
     #{&}-container__btn {
@@ -135,11 +145,12 @@ $section-padding: 36px 20px;
         ;
         width: 100%;
         margin-bottom: 16px;
-  }
+    }
+
     #{&}__btn {
         display: flex;
         flex-wrap: wrap;
-        align-items:center;
+        align-items: center;
         position: relative;
         width: 100%;
         height: 5rem;
@@ -150,6 +161,7 @@ $section-padding: 36px 20px;
         background: $cd-bg-grey;
         box-shadow: 0px 5px 10px 0px #cfcfcf;
     }
+
     #{&}__btn__step {
         display: flex;
         align-items: center;
@@ -163,43 +175,46 @@ $section-padding: 36px 20px;
         background: $cd-primary;
         color: white;
     }
+
     #{&}__btn__icon {
         margin: 0 2rem 0 1.5rem;
-        color: #646464;;
+        color: #646464;
+        ;
     }
+
     #{&}__btn__text {
         font-weight: map-get($font-weights, medium);
     }
-    
+
 }
 
 @media (min-width: 768px) {
     .operation {
-      display:flex;
-      flex-wrap: wrap;
-
-      #{&}-container__btn {
         display: flex;
-        flex-wrap:wrap;
-        justify-content: space-evenly;
-        gap: 20px;
-    }
-       #{&}__btn {
-        width: 20rem;
-      
-    }
-    }
-   
-  }
+        flex-wrap: wrap;
 
-  .restaurants {
+        #{&}-container__btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+
+        #{&}__btn {
+            width: 20rem;
+        }
+    }
+
+}
+
+.restaurants {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     padding: $section-padding;
     background: $cd-bg-grey;
-    
+
     #{&}__title {
         margin: 0;
     }
@@ -212,6 +227,7 @@ $section-padding: 36px 20px;
         margin-bottom: 16px;
         gap: 10px;
     }
+
     #{&}__card {
         margin-top: 20px;
         border-radius: 20px;
@@ -220,11 +236,12 @@ $section-padding: 36px 20px;
         box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
         position: relative;
     }
+
     #{&}__img {
         height: 230px;
         border-radius: 20px 20px 0 0;
     }
-    
+
     #{&}__tag {
         background: #71d8be;
         color: #166350;
@@ -235,6 +252,7 @@ $section-padding: 36px 20px;
         top: 1rem;
         right: 1.05rem;
     }
+
     #{&}__content {
         display: flex;
         justify-content: space-between;
@@ -243,18 +261,22 @@ $section-padding: 36px 20px;
         width: 100%;
         height: 5rem;
         padding: 0 16px;
+
         &__text {
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
             gap: 7px;
         }
+
         &__title {
-           margin: 0;
+            margin: 0;
         }
+
         &__location {
             margin: 0;
         }
+
         &__heart {
             padding: 11px 16px 0 0;
             font-size: 25px;
@@ -271,11 +293,13 @@ $section-padding: 36px 20px;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+
         #{&}-container__cards {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
         }
+
         #{&}__card {
             width: 20rem;
         }
@@ -286,18 +310,42 @@ $section-padding: 36px 20px;
     .restaurants {
         display: flex;
         width: 100%;
+
         #{&}-container__cards {
             display: flex;
             flex-wrap: nowrap;
             width: 100%;
             gap: 35px;
         }
+
         #{&}__card {
             width: 18rem;
             max-width: 20rem;
         }
     }
-    
-
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: $section-padding;
+    background: #070707c9;
+    color: white;
+    font-weight: map-get($font-weights, medium);
+    #{&}__title {
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: map-get($font-weights, regular);
+        margin-top: 0;
+    }
+    #{&}__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #{&}__icons {
+        font-size: 1rem;
+        font-weight: map-get($font-weights, regular);
+
+    }
+    
+}
