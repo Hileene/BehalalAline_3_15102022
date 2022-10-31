@@ -487,7 +487,9 @@ li {
 }
 @media (min-width: 1280px) {
   .menu__image {
-    height: 480px;
+    height: 594px;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 .menu-wrapper {

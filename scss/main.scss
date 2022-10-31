@@ -138,6 +138,7 @@ $margin-zero: 0;
         white-space: nowrap;
         cursor: pointer;
         padding: 10px;
+        
     }
 }
 
@@ -402,7 +403,8 @@ $margin-zero: 0;
 
 @media (min-width: 1280px) {
     .menu__image {
-        height: 480px
+        height: 594px;
+        object-position:center;
     }
 }
 
@@ -516,4 +518,8 @@ $margin-zero: 0;
         }
     }
    
+}
+
+@media (min-width: 768px) {
+    
 }
