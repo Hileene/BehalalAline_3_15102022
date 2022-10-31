@@ -139,6 +139,7 @@ li {
           justify-content: center;
   padding: 36px 20px;
   background-color: #f7f7f7;
+  /*FAIRE UNE MIXIN BOUTON-PURPLE*/
 }
 .main-title .main-title__intro h1 {
   font-size: 28px;
@@ -519,9 +520,16 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  /*FAIRE UNE MIXIN MENU-HEART*/
 }
 .menu-name .menu-name__title {
   font-family: "Shrikhand";
   font-size: 1.7rem;
   margin: 0;
+}
+.menu-name .menu-name__heart {
+  font-size: 2rem;
+  color: #5b5b5b;
+  position: absolute;
+  right: 4rem;
 }/*# sourceMappingURL=main.css.map */

@@ -49,16 +49,18 @@ $menutitles-size: 1.7rem;
     top: 0;
     background: white;
     z-index: 1;
+
     &.header--no-shadow {
         box-shadow: none;
     }
+
     #{&}__menu {
         display: flex;
         align-items: center;
         justify-content: space-between;
         box-shadow: none;
     }
-   
+
     #{&}__return {
         position: absolute;
         left: 2rem;
@@ -120,6 +122,7 @@ $menutitles-size: 1.7rem;
         margin-bottom: 32px;
     }
 
+    /*FAIRE UNE MIXIN BOUTON-PURPLE*/
     #{&}__btn {
         background: $cd-secondary;
         display: flex;
@@ -343,18 +346,21 @@ $menutitles-size: 1.7rem;
     background: #070707c9;
     color: white;
     font-weight: map-get($font-weights, medium);
+
     #{&}__title {
         font-family: 'Shrikhand', sans-serif;
         font-weight: map-get($font-weights, regular);
         margin: 0;
         margin-bottom: 30px;
     }
+
     #{&}__nav {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         gap: 15px;
     }
+
     #{&}__links {
         display: flex;
         gap: 1rem
@@ -364,13 +370,14 @@ $menutitles-size: 1.7rem;
 @media (min-width: 768px) {
     .footer {
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         align-items: center;
         width: 100%;
-        
-        #{&}__title{
+
+        #{&}__title {
             font-size: 2.5rem;
         }
+
         #{&}__nav {
             display: flex;
             flex-direction: row;
@@ -378,11 +385,13 @@ $menutitles-size: 1.7rem;
             justify-content: space-around;
             width: 70%;
         }
-        #{&}__links{
+
+        #{&}__links {
             display: flex;
         }
     }
 }
+
 @media (min-width: 768px) {
     .menu__image {
         height: 350px;
@@ -396,14 +405,15 @@ $menutitles-size: 1.7rem;
     }
 }
 
- .menu-wrapper {
+.menu-wrapper {
     width: 100%;
     padding: $section-padding;
     margin-top: -63px;
     position: relative;
     background-color: $cd-bg-grey;
     border-radius: 45px 45px 0 0;
- }
+}
+
 @media (min-width: 768px) {
     .menu-wrapper {
         border-radius: 0;
@@ -421,9 +431,18 @@ $menutitles-size: 1.7rem;
     align-items: center;
     justify-content: space-between;
     position: relative;
+
     #{&}__title {
         font-family: $menutitles-font;
         font-size: $menutitles-size;
         margin: 0;
+    }
+
+    /*FAIRE UNE MIXIN MENU-HEART*/
+    #{&}__heart {
+        font-size: 2rem;
+        color: #5b5b5b;
+        position: absolute;
+        right: 4rem;
     }
 }
