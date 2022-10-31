@@ -125,7 +125,7 @@ $margin-zero: 0;
     }
 
     /*FAIRE UNE MIXIN BOUTON-PURPLE*/
-    #{&}__btn {
+    .btn {
         background: $cd-secondary;
         display: flex;
         align-items: center;
@@ -138,7 +138,6 @@ $margin-zero: 0;
         white-space: nowrap;
         cursor: pointer;
         padding: 10px;
-
     }
 }
 
@@ -509,6 +508,7 @@ $margin-zero: 0;
         }
         &__details {
             margin-top: 0;
+            font-weight: map-get($font-weights, light);
         }
         &__price {
             margin:0;

@@ -149,7 +149,7 @@ li {
   font-weight: 200;
   margin-bottom: 32px;
 }
-.main-title .main-title__btn {
+.main-title .btn {
   background: #FF79DA;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,6 +625,7 @@ li {
 }
 .menu .menu__content__details {
   margin-top: 0;
+  font-weight: 200;
 }
 .menu .menu__content__price {
   margin: 0;
