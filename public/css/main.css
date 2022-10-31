@@ -566,6 +566,15 @@ li {
   gap: 10px;
 }
 .menu .menu__category {
-  border: 1px solid red;
   margin: 0;
+  font-weight: 300;
+  position: relative;
+}
+.menu .menu__category::after {
+  content: "";
+  width: 4rem;
+  border-bottom: 3px solid #99E2D0;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
 }/*# sourceMappingURL=main.css.map */

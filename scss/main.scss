@@ -31,7 +31,8 @@ $cd-secondary: #FF79DA;
 $cd-tertiary: #99E2D0;
 $cd-bg-grey: #f7f7f7;
 $font-weights: (
-    "regular": 200,
+    "light": 200,
+    "regular":300,
     "medium": 500,
     "bold": 800
 );
@@ -119,7 +120,7 @@ $margin-zero: 0;
 
     #{&}__intro-plus {
         font-size: 18px;
-        font-weight: map-get($font-weights, regular);
+        font-weight: map-get($font-weights, light);
         margin-bottom: 32px;
     }
 
@@ -350,7 +351,7 @@ $margin-zero: 0;
 
     #{&}__title {
         font-family: 'Shrikhand', sans-serif;
-        font-weight: map-get($font-weights, regular);
+        font-weight: map-get($font-weights, light);
         margin: $margin-zero;
         margin-bottom: 30px;
     }
@@ -454,6 +455,7 @@ $margin-zero: 0;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+
     #{&}__list {
         border: 1px solid green;
         display: flex;
@@ -463,10 +465,20 @@ $margin-zero: 0;
         width: 100%;
         margin-bottom: 16px;
         gap: 10px;
-    } 
+    }
+
     #{&}__category {
-        border: 1px solid red;
         margin: $margin-zero;
-        
-    } 
+        font-weight: map-get($font-weights, regular);
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 4rem;
+            border-bottom: 3px solid $cd-tertiary;
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+        }
+    }
 }
