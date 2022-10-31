@@ -36,6 +36,7 @@ $font-weights: (
     "bold": 800
 );
 $section-padding: 36px 20px;
+$menu-title: 'Shrikhand',sans-serif;
 
 
 .header {
@@ -47,10 +48,14 @@ $section-padding: 36px 20px;
     top: 0;
     background: white;
     z-index: 1;
+    &.header--no-shadow {
+        box-shadow: none;
+    }
     #{&}__menu {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        box-shadow: none;
     }
    
     #{&}__return {
@@ -377,6 +382,15 @@ $section-padding: 36px 20px;
         }
     }
 }
+
+.menu__image{
+
+}
  .menu-wrapper {
+    width: 100%;
+    padding: 32px;
+    margin-top: -63px;
+    position: relative;
     background-color: $cd-bg-grey;
+    border-radius: 45px 45px 0 0;
  }
