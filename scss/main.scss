@@ -36,7 +36,8 @@ $font-weights: (
     "bold": 800
 );
 $section-padding: 36px 20px;
-$menu-title: 'Shrikhand',sans-serif;
+$menutitles-font: "Shrikhand";
+$menutitles-size: 1.7rem;
 
 
 .header {
@@ -397,7 +398,7 @@ $menu-title: 'Shrikhand',sans-serif;
 
  .menu-wrapper {
     width: 100%;
-    padding: 32px;
+    padding: $section-padding;
     margin-top: -63px;
     position: relative;
     background-color: $cd-bg-grey;
@@ -412,5 +413,17 @@ $menu-title: 'Shrikhand',sans-serif;
 @media (min-width: 1280px) {
     .menu-wrapper {
         margin-top: -134px;
+    }
+}
+
+.menu-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    #{&}__title {
+        font-family: $menutitles-font;
+        font-size: $menutitles-size;
+        margin: 0;
     }
 }
