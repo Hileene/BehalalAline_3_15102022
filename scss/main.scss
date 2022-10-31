@@ -433,6 +433,7 @@ $margin-zero: 0;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 20px;
 
     #{&}__title {
         font-family: $menutitles-font;
@@ -440,24 +441,22 @@ $margin-zero: 0;
         margin: $margin-zero;
     }
 
-    /*FAIRE UNE MIXIN MENU-HEART*/
+    /*FAIRE UNE MIXIN MENU-HEART ?*/
     #{&}__heart {
         font-size: 2rem;
         color: #5b5b5b;
         position: absolute;
-        right: 4rem;
+        right: 0rem;
     }
 }
 
 .menu {
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
 
     #{&}__list {
-        border: 1px solid green;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -468,9 +467,10 @@ $margin-zero: 0;
     }
 
     #{&}__category {
-        margin: $margin-zero;
         font-weight: map-get($font-weights, regular);
         position: relative;
+        text-transform: uppercase;
+        margin-bottom: 30px;
 
         &::after {
             content: "";
@@ -481,4 +481,39 @@ $margin-zero: 0;
             left: 0;
         }
     }
+    #{&}__card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-radius: 15px;
+        height: 5rem;
+        background: #ffff;
+        box-shadow: 0px 5px 10px 0px #cfcfcf;
+    }
+    #{&}__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        height: 5rem;
+        width:100%;
+        position:relative;
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        &__title {
+            margin-bottom: 0;
+        }
+        &__details {
+            margin-top: 0;
+        }
+        &__price {
+            margin:0;
+            margin-top:28px
+        }
+    }
+   
 }

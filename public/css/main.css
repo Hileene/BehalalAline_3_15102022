@@ -520,7 +520,8 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  /*FAIRE UNE MIXIN MENU-HEART*/
+  margin-bottom: 20px;
+  /*FAIRE UNE MIXIN MENU-HEART ?*/
 }
 .menu-name .menu-name__title {
   font-family: "Shrikhand";
@@ -531,11 +532,10 @@ li {
   font-size: 2rem;
   color: #5b5b5b;
   position: absolute;
-  right: 4rem;
+  right: 0rem;
 }
 
 .menu {
-  border: 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,7 +548,6 @@ li {
   width: 100%;
 }
 .menu .menu__list {
-  border: 1px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,9 +565,10 @@ li {
   gap: 10px;
 }
 .menu .menu__category {
-  margin: 0;
   font-weight: 300;
   position: relative;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .menu .menu__category::after {
   content: "";
@@ -577,4 +577,56 @@ li {
   position: absolute;
   bottom: -0.5rem;
   left: 0;
+}
+.menu .menu__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-radius: 15px;
+  height: 5rem;
+  background: white;
+  -webkit-box-shadow: 0px 5px 10px 0px #cfcfcf;
+          box-shadow: 0px 5px 10px 0px #cfcfcf;
+}
+.menu .menu__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  height: 5rem;
+  width: 100%;
+  position: relative;
+}
+.menu .menu__content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.menu .menu__content__title {
+  margin-bottom: 0;
+}
+.menu .menu__content__details {
+  margin-top: 0;
+}
+.menu .menu__content__price {
+  margin: 0;
+  margin-top: 28px;
 }/*# sourceMappingURL=main.css.map */
