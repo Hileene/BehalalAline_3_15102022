@@ -477,6 +477,18 @@ li {
     display: flex;
   }
 }
+@media (min-width: 768px) {
+  .menu__image {
+    height: 350px;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+}
+@media (min-width: 1280px) {
+  .menu__image {
+    height: 480px;
+  }
+}
 .menu-wrapper {
   width: 100%;
   padding: 32px;
@@ -484,4 +496,15 @@ li {
   position: relative;
   background-color: #f7f7f7;
   border-radius: 45px 45px 0 0;
+}
+
+@media (min-width: 768px) {
+  .menu-wrapper {
+    border-radius: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .menu-wrapper {
+    margin-top: -134px;
+  }
 }/*# sourceMappingURL=main.css.map */

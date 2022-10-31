@@ -382,10 +382,19 @@ $menu-title: 'Shrikhand',sans-serif;
         }
     }
 }
-
-.menu__image{
-
+@media (min-width: 768px) {
+    .menu__image {
+        height: 350px;
+        object-position: bottom;
+    }
 }
+
+@media (min-width: 1280px) {
+    .menu__image {
+        height: 480px
+    }
+}
+
  .menu-wrapper {
     width: 100%;
     padding: 32px;
@@ -394,3 +403,14 @@ $menu-title: 'Shrikhand',sans-serif;
     background-color: $cd-bg-grey;
     border-radius: 45px 45px 0 0;
  }
+@media (min-width: 768px) {
+    .menu-wrapper {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .menu-wrapper {
+        margin-top: -134px;
+    }
+}
