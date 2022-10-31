@@ -38,6 +38,7 @@ $font-weights: (
 $section-padding: 36px 20px;
 $menutitles-font: "Shrikhand";
 $menutitles-size: 1.7rem;
+$margin-zero: 0;
 
 
 .header {
@@ -149,7 +150,7 @@ $menutitles-size: 1.7rem;
     width: 100%;
 
     #{&}__title {
-        margin: 0;
+        margin: $margin-zero;
     }
 
     #{&}-container__btn {
@@ -230,7 +231,7 @@ $menutitles-size: 1.7rem;
     background: $cd-bg-grey;
 
     #{&}__title {
-        margin: 0;
+        margin: $margin-zero;
     }
 
     #{&}-container__cards {
@@ -284,11 +285,11 @@ $menutitles-size: 1.7rem;
         }
 
         &__title {
-            margin: 0;
+            margin: $margin-zero;
         }
 
         &__location {
-            margin: 0;
+            margin: $margin-zero;
         }
 
         &__heart {
@@ -350,7 +351,7 @@ $menutitles-size: 1.7rem;
     #{&}__title {
         font-family: 'Shrikhand', sans-serif;
         font-weight: map-get($font-weights, regular);
-        margin: 0;
+        margin: $margin-zero;
         margin-bottom: 30px;
     }
 
@@ -435,7 +436,7 @@ $menutitles-size: 1.7rem;
     #{&}__title {
         font-family: $menutitles-font;
         font-size: $menutitles-size;
-        margin: 0;
+        margin: $margin-zero;
     }
 
     /*FAIRE UNE MIXIN MENU-HEART*/
@@ -445,4 +446,27 @@ $menutitles-size: 1.7rem;
         position: absolute;
         right: 4rem;
     }
+}
+
+.menu {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    #{&}__list {
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 16px;
+        gap: 10px;
+    } 
+    #{&}__category {
+        border: 1px solid red;
+        margin: $margin-zero;
+        
+    } 
 }
