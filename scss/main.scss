@@ -123,10 +123,9 @@ $margin-zero: 0;
         font-weight: map-get($font-weights, light);
         margin-bottom: 32px;
     }
-
-    /*FAIRE UNE MIXIN BOUTON-PURPLE*/
-    .btn {
-        background: $cd-secondary;
+}
+.btn-bg {
+    background: $cd-secondary;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -138,9 +137,6 @@ $margin-zero: 0;
         white-space: nowrap;
         cursor: pointer;
         padding: 10px;
-       
-        
-    }
 }
 
 
@@ -521,6 +517,3 @@ $margin-zero: 0;
    
 }
 
-@media (min-width: 768px) {
-    
-}

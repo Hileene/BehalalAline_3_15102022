@@ -139,7 +139,6 @@ li {
           justify-content: center;
   padding: 36px 20px;
   background-color: #f7f7f7;
-  /*FAIRE UNE MIXIN BOUTON-PURPLE*/
 }
 .main-title .main-title__intro h1 {
   font-size: 28px;
@@ -149,7 +148,8 @@ li {
   font-weight: 200;
   margin-bottom: 32px;
 }
-.main-title .btn {
+
+.btn-bg {
   background: #FF79DA;
   display: -webkit-box;
   display: -ms-flexbox;
