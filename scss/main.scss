@@ -39,7 +39,7 @@ $font-weights: (
 $section-padding: 36px 20px;
 $menutitles-font: "Shrikhand";
 $menutitles-size: 1.7rem;
-$margin-zero: 0;
+$margin-size: 0;
 
 
 .header {
@@ -229,7 +229,7 @@ $margin-zero: 0;
     background: $cd-bg-grey;
 
     #{&}__title {
-        margin: $margin-zero;
+        margin: $margin-size;
     }
 
     #{&}-container__cards {
@@ -283,11 +283,11 @@ $margin-zero: 0;
         }
 
         &__title {
-            margin: $margin-zero;
+            margin: $margin-size;
         }
 
         &__location {
-            margin: $margin-zero;
+            margin: $margin-size;
         }
 
         &__heart {
@@ -349,7 +349,7 @@ $margin-zero: 0;
     #{&}__title {
         font-family: 'Shrikhand', sans-serif;
         font-weight: map-get($font-weights, light);
-        margin: $margin-zero;
+        margin: $margin-size;
         margin-bottom: 30px;
     }
 
@@ -436,7 +436,7 @@ $margin-zero: 0;
     #{&}__title {
         font-family: $menutitles-font;
         font-size: $menutitles-size;
-        margin: $margin-zero;
+        margin: $margin-size;
     }
 
     /*FAIRE UNE MIXIN MENU-HEART ?*/
@@ -510,7 +510,7 @@ $margin-zero: 0;
             font-weight: map-get($font-weights, light);
         }
         &__price {
-            margin:0;
+            margin:$margin-size;
             margin-top:28px
         }
     }
