@@ -73,6 +73,11 @@ $margin-size: 0;
         width: 200px;
     }
 }
+@media (min-width: 768px) {
+    .header.header--no-shadow {
+        padding: 1rem;
+    }
+}
 
 
 .search {
@@ -393,15 +398,14 @@ $margin-size: 0;
 
 @media (min-width: 768px) {
     .menu__image {
-        height: 350px;
-        object-position: bottom;
+        max-height:24rem;
+       
     }
 }
 
 @media (min-width: 1280px) {
     .menu__image {
-        height: 594px;
-        object-position:center;
+       width:100%;
     }
 }
 
@@ -417,12 +421,14 @@ $margin-size: 0;
 @media (min-width: 768px) {
     .menu-wrapper {
         border-radius: 0;
+        margin-top: -85px;
+        padding: 20px;
     }
 }
 
 @media (min-width: 1280px) {
     .menu-wrapper {
-        margin-top: -134px;
+        margin-top: -50px;
     }
 }
 
@@ -453,7 +459,6 @@ $margin-size: 0;
 		}
 	}
 	&__list {
-		border: 1px solid;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -462,7 +467,6 @@ $margin-size: 0;
 		margin-bottom: 16px;
 		gap: 10px;
 		#{&}__category {
-			border: 1px transparent;
 			display: flex;
 			flex-direction: column;
 		}
@@ -477,12 +481,11 @@ $margin-size: 0;
 				width: 4rem;
 				border-bottom: 3px solid $cd-tertiary;
 				position: absolute;
-				bottom: -0.5rem;
+				bottom: 0.5rem;
 				left: 0;
 			}
 		}
 		#{&}__items {
-			border: 3px solid transparent;
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: column;
@@ -531,24 +534,25 @@ $margin-size: 0;
 	.menu {
 		display: flex;
 		width: 100%;
+        &__header {
+            margin: 20px 0 20px 0;
+            justify-content: center;
+            #{&}__heart {
+                right: 11rem;
+            }
+        }
 		&__list {
 			display: flex;
 			flex-direction: row;
 			width: 100%;
 			#{&}__category {
 				display: flex;
-				border: 1px solid pink;
-				width: 33%;
+				width: 45%;
 			}
+            #{&}__title {
+                margin-bottom: 15px;
+            }
 
-			#{&}__items {
-				display: flex;
-				flex-wrap: wrap;
-				width: 100%;
-			}
-			#{&}__card {
-				width: 100%;
-			}
 		}
 	}
 }
@@ -557,23 +561,20 @@ $margin-size: 0;
 	.menu {
 		display: flex;
 		width: 100%;
+        &__header {
+            margin: 20px 0 20px 0;
+            justify-content: center;
+            #{&}__heart {
+                right: 26rem;
+            }
+        }
 		&__list {
 			display: flex;
 			flex-direction: row;
 			width: 100%;
 			#{&}__category {
 				display: flex;
-				border: 1px solid pink;
 				width: 30%;
-			}
-
-			#{&}__items {
-				display: flex;
-				flex-wrap: wrap;
-				width: 100%;
-			}
-			#{&}__card {
-				width: 100%;
 			}
 		}
 	}
