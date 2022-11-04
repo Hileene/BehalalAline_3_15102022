@@ -155,7 +155,6 @@ li {
 }
 
 .btn-bg {
-  background: #FF79DA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,6 +172,19 @@ li {
   white-space: nowrap;
   cursor: pointer;
   padding: 10px;
+  background: #FF79DA;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn-bg:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+  -webkit-box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
 }
 
 .operation {
@@ -365,6 +377,10 @@ li {
   position: absolute;
   right: 1rem;
   top: 0;
+}
+
+.fa-heart {
+  background-color: red;
 }
 
 @media (min-width: 768px) {
