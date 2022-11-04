@@ -144,14 +144,15 @@ $margin-size: 0;
     cursor: pointer;
     padding: 10px;
     background: $cd-secondary;
-	background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	transition: all 0.2s ease-in-out;
-	&:hover {
-		filter: brightness(1.1);
-		box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.3);
-		opacity: 0.9;
-	}
+    background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        filter: brightness(1.1);
+        box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.3);
+        opacity: 0.9;
+    }
 }
 
 
@@ -306,17 +307,26 @@ $margin-size: 0;
         }
 
         &__heart {
-            padding: 11px 16px 0 0;
-            font-size: 25px;
-            color: #5b5b5b;
-            position: absolute;
             right: 1rem;
-            top: 0;
+            position: absolute;
+            bottom: 4.6rem;
         }
     }
 }
+
 .fa-heart {
-    background-color: red;
+    padding: 11px 16px 0 0;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 0;
+
+
+    &::before {
+        content: "\f004";
+
+    }
+
+
 }
 
 @media (min-width: 768px) {
@@ -465,12 +475,12 @@ $margin-size: 0;
         }
 
         /*FAIRE UNE MIXIN MENU-HEART ?*/
-        #{&}__heart {
+        /* #{&}__heart {
             font-size: 2rem;
             color: #5b5b5b;
             position: absolute;
             right: 0rem;
-        }
+        }*/
     }
 
     &__list {
