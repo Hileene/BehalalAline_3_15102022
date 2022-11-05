@@ -323,6 +323,16 @@ li {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
+  -webkit-transition: -webkit-filter 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: -webkit-filter 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+}
+.restaurants .restaurants__card:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .restaurants .restaurants__img {
   height: 230px;
@@ -375,22 +385,16 @@ li {
 }
 .restaurants .restaurants__content .fas {
   color: transparent;
-  background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
           background-clip: text;
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63);
-  transition: opacity 0.2s ease-in-out, -webkit-transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63);
-  transition: opacity 0.2s ease-in-out, transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63);
-  transition: opacity 0.2s ease-in-out, transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63), -webkit-transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   cursor: pointer;
 }
 .restaurants .restaurants__content .fas:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   opacity: 1;
-  z-index: 1000;
 }
 
 @media (min-width: 768px) {
@@ -569,6 +573,24 @@ li {
   font-family: "Shrikhand";
   font-size: 1.7rem;
   margin: 0;
+}
+.menu__header i {
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+}
+.menu__header .fas {
+  color: transparent;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu__header .fas:hover {
+  opacity: 1;
 }
 .menu__list {
   display: -webkit-box;
