@@ -234,6 +234,14 @@ li {
   background: #f7f7f7;
   -webkit-box-shadow: 0px 5px 10px 0px #cfcfcf;
           box-shadow: 0px 5px 10px 0px #cfcfcf;
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+.operation .operation__btn:hover {
+  background-color: #f2eafb;
+}
+.operation .operation__btn:hover > .operation .operation__btn__i:hover {
+  color: #9356DC;
 }
 .operation .operation__btn__step {
   display: -webkit-box;
@@ -257,6 +265,8 @@ li {
 .operation .operation__btn__icon {
   margin: 0 2rem 0 1.5rem;
   color: #646464;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
 }
 .operation .operation__btn__text {
   font-weight: 500;
@@ -385,7 +395,7 @@ li {
 }
 .restaurants .restaurants__content .fas {
   color: transparent;
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
           background-clip: text;
   opacity: 0;
@@ -581,7 +591,7 @@ li {
 }
 .menu__header .fas {
   color: transparent;
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
           background-clip: text;
   opacity: 0;
