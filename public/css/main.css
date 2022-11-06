@@ -3,7 +3,6 @@
           box-sizing: border-box;
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
@@ -619,7 +618,7 @@ li {
   margin-bottom: 16px;
   gap: 10px;
 }
-.menu__list .menu__list__category {
+.menu__list__category {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,13 +627,13 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.menu__list .menu__list__title {
+.menu__list__title {
   font-weight: 300;
   position: relative;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-.menu__list .menu__list__title::after {
+.menu__list__title::after {
   content: "";
   width: 4rem;
   border-bottom: 3px solid #99E2D0;
@@ -642,7 +641,7 @@ li {
   bottom: 0.5rem;
   left: 0;
 }
-.menu__list .menu__list__items {
+.menu__list__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,7 +656,7 @@ li {
           justify-content: space-evenly;
   gap: 16px;
 }
-.menu__list .menu__list__card {
+.menu__list__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,25 +669,55 @@ li {
   width: 100%;
   border-radius: 15px;
   height: 5rem;
+  cursor: pointer;
   background: white;
   -webkit-box-shadow: 0px 5px 10px 0px #cfcfcf;
           box-shadow: 0px 5px 10px 0px #cfcfcf;
   -webkit-animation: delay-mode 1s both;
           animation: delay-mode 1s both;
 }
-.menu__list .menu__list__card:nth-child(1) {
+.menu__list__card:nth-child(1) {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
-.menu__list .menu__list__card:nth-child(2) {
+.menu__list__card:nth-child(2) {
   -webkit-animation-delay: 400ms;
           animation-delay: 400ms;
 }
-.menu__list .menu__list__card:nth-child(3) {
+.menu__list__card:nth-child(3) {
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
 }
-.menu__list .menu__list__content {
+.menu__list__card__checked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #99E2D0;
+  margin-right: -60px;
+  width: 59px;
+  height: 5rem;
+  border-radius: 0 20px 20px 0;
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.menu__list__card__checked i {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.menu__list__card:hover .menu__list__car__checked i {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.menu__list__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -703,7 +732,7 @@ li {
   width: 100%;
   position: relative;
 }
-.menu__list .menu__list__content__text {
+.menu__list__content__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -713,14 +742,14 @@ li {
           flex-direction: column;
   gap: 5px;
 }
-.menu__list .menu__list__content__title {
+.menu__list__content__title {
   margin-bottom: 0;
 }
-.menu__list .menu__list__content__details {
+.menu__list__content__details {
   margin-top: 0;
   font-weight: 200;
 }
-.menu__list .menu__list__content__price {
+.menu__list__content__price {
   margin: 0;
   margin-top: 28px;
 }
@@ -763,10 +792,10 @@ li {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .menu__header .menu__header__title {
+  .menu__header__title {
     font-size: 2.4rem;
   }
-  .menu__header .menu__header__heart {
+  .menu__header__heart {
     right: 8rem;
   }
   .menu__list {
@@ -782,13 +811,13 @@ li {
             justify-content: space-between;
     width: 100%;
   }
-  .menu__list .menu__list__category {
+  .menu__list__category {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 49%;
   }
-  .menu__list .menu__list__title {
+  .menu__list__title {
     margin-bottom: 15px;
   }
 }
@@ -805,7 +834,7 @@ li {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .menu__header .menu__header__heart {
+  .menu__header__heart {
     right: 24rem;
   }
   .menu__list {
@@ -818,7 +847,7 @@ li {
             flex-direction: row;
     width: 100%;
   }
-  .menu__list .menu__list__category {
+  .menu__list__category {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
