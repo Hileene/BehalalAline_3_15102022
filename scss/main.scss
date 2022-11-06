@@ -190,10 +190,12 @@ $margin-size: 0;
         background: $cd-bg-grey;
         box-shadow: 0px 5px 10px 0px #cfcfcf;
         transition: background-color 250ms;
+
         &:hover {
-             background-color: lighten($cd-primary, 35);
+            background-color: lighten($cd-primary, 35);
         }
-        &:hover > &__i:hover {
+
+        &:hover>&__i:hover {
             color: $cd-primary;
         }
     }
@@ -563,6 +565,12 @@ $margin-size: 0;
             height: 5rem;
             background: #ffff;
             box-shadow: 0px 5px 10px 0px #cfcfcf;
+            animation: delay-mode 1s both;
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i}) {
+					animation-delay: 200ms * $i;
+				}
+			}
         }
 
         #{&}__content {
@@ -595,6 +603,19 @@ $margin-size: 0;
             }
         }
     }
+}
+
+@keyframes delay-mode {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
 }
 
 @media (min-width: 768px) {
