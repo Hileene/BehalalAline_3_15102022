@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -699,21 +700,28 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   background: #99E2D0;
-  margin-right: -60px;
-  width: 59px;
+  width: 0;
+  opacity: 0;
   height: 5rem;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 15px 15px 0;
   font-size: 20px;
   color: white;
   overflow: hidden;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.menu__list__card:hover .menu__list__card__checked {
+  opacity: 100%;
+  width: 7rem;
 }
 .menu__list__card__checked i {
+  font-size: 1.5rem;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
+  -webkit-transform: rotate(360°);
+          transform: rotate(360°);
 }
-.menu__list__card:hover .menu__list__car__checked i {
+.menu__list__card:hover i {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }

@@ -574,22 +574,27 @@ $margin-size: 0;
                 align-items: center;
                 justify-content: center;
                 background: $cd-tertiary;
-                margin-right: -60px;
-                width: 59px;
+                width: 0;
+                opacity: 0;
                 height:5rem;
-                border-radius: 0 20px 20px 0;
+                border-radius: 0 15px 15px 0;
                 font-size: 20px;
                 color: white;
                 overflow: hidden;
-                transition: all 0.5s ease;
+                transition: all 0.5s ease-in-out;
+            }
+            &:hover &__checked {
+                opacity: 100%;
+                width: 7rem;
             }
             &__checked i {
+                font-size: 1.5rem;
                 transition: all 0.7s ease;
+                transform: rotate(360°);
             }
-           
-            &:hover .menu__list__car__checked i {
+            &:hover i {
                 transform: rotate(0);
-
+                
             }
         }
 
