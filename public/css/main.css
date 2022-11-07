@@ -246,8 +246,15 @@ li {
   -webkit-transition: background-color 250ms;
   transition: background-color 250ms;
 }
+.operation__btn i {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
 .operation__btn:hover {
   background-color: #f2eafb;
+}
+.operation__btn:hover i {
+  color: #9356DC;
 }
 .operation__btn__step {
   display: -webkit-box;
