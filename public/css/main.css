@@ -541,14 +541,19 @@ li {
   }
 }
 /***********************************PARTIE MENU PALETTE DU GOÛT**************************/
+.menu__image {
+  height: 70vw;
+}
+
 /**************************************MENU-IMAGE RESPONSIVE****************************/
 @media (min-width: 768px) {
   .menu__image {
-    max-height: 24rem;
+    height: 41vw;
   }
 }
 @media (min-width: 1280px) {
   .menu__image {
+    height: 33vw;
     width: 100%;
   }
 }
