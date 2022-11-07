@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/**************************************GÉNÉRAL*********************************/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -33,6 +34,9 @@ li {
   list-style-type: none;
 }
 
+/**************************************VARIABLES***************************/
+/***************************************MAP******************************/
+/*********************************************HEADER*******************************/
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,11 +78,13 @@ li {
   width: 200px;
 }
 
+/********************************HEADER RESPONSIVE***************************/
 @media (min-width: 768px) {
   .header.header--no-shadow {
     padding: 1rem;
   }
 }
+/***************************************SEARCH****************************/
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,6 +133,7 @@ li {
   font-size: 1.5rem;
 }
 
+/********************************MAIN TITLE***************************/
 .main-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +161,7 @@ li {
   margin-bottom: 32px;
 }
 
+/**********BOUTON PURPLE*********/
 .btn-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,6 +195,7 @@ li {
   opacity: 0.9;
 }
 
+/**************************************OPERATION******************************/
 .operation {
   padding: 36px 20px;
   display: -webkit-box;
@@ -272,6 +281,7 @@ li {
   font-weight: 500;
 }
 
+/**************************************OPERATION RESPONSIVE********************/
 @media (min-width: 768px) {
   .operation {
     display: -webkit-box;
@@ -295,6 +305,7 @@ li {
     width: 20rem;
   }
 }
+/****************************PARTIE RESTAURANTS*************************/
 .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,6 +418,7 @@ li {
   opacity: 1;
 }
 
+/**********************************RESTAURANTS RESPONSIVE****************************/
 @media (min-width: 768px) {
   .restaurants {
     display: -webkit-box;
@@ -449,6 +461,7 @@ li {
     max-width: 20rem;
   }
 }
+/***************************************FOOTER*********************************/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,6 +501,7 @@ li {
   gap: 1rem;
 }
 
+/********************************FOOTER RESPONSIVE**********************************/
 @media (min-width: 768px) {
   .footer {
     display: -webkit-box;
@@ -523,6 +537,8 @@ li {
     display: flex;
   }
 }
+/***********************************PARTIE MENU PALETTE DU GOÛT**************************/
+/**************************************MENU-IMAGE RESPONSIVE****************************/
 @media (min-width: 768px) {
   .menu__image {
     max-height: 24rem;
@@ -542,6 +558,7 @@ li {
   border-radius: 45px 45px 0 0;
 }
 
+/********************************MENU-WRAPPER RESPONSIVE************************/
 @media (min-width: 768px) {
   .menu-wrapper {
     border-radius: 0;
@@ -618,6 +635,7 @@ li {
   width: 100%;
   margin-bottom: 16px;
   gap: 10px;
+  /****CARTES MENU*****/
 }
 .menu__list__category {
   display: -webkit-box;
@@ -704,26 +722,20 @@ li {
   opacity: 0;
   height: 5rem;
   border-radius: 0 15px 15px 0;
-  font-size: 20px;
   color: white;
-  overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.menu__list__card:hover .menu__list__card__checked {
-  opacity: 100%;
-  width: 7rem;
-}
 .menu__list__card__checked i {
   font-size: 1.5rem;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  -webkit-transform: rotate(360°);
-          transform: rotate(360°);
+}
+.menu__list__card:hover .menu__list__card__checked {
+  opacity: 100%;
+  width: 5rem;
 }
 .menu__list__card:hover i {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  -webkit-animation: checkspinn 0.7s ease-in-out;
+          animation: checkspinn 0.7s ease-in-out;
 }
 .menu__list__content {
   display: -webkit-box;
@@ -762,6 +774,7 @@ li {
   margin-top: 28px;
 }
 
+/****************************ANIMATION*******************/
 @-webkit-keyframes delay-mode {
   0% {
     -webkit-transform: translateY(50%);
@@ -774,7 +787,6 @@ li {
     opacity: 1;
   }
 }
-
 @keyframes delay-mode {
   0% {
     -webkit-transform: translateY(50%);
@@ -787,6 +799,27 @@ li {
     opacity: 1;
   }
 }
+@-webkit-keyframes checkspinn {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes checkspinn {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+/*************************************MENU REPONSIVE**************************/
 @media (min-width: 768px) {
   .menu {
     display: -webkit-box;

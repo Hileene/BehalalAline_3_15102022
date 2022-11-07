@@ -1,3 +1,4 @@
+/**************************************GÉNÉRAL*********************************/
 * {
     box-sizing: border-box;
 }
@@ -24,23 +25,25 @@ a {
 li {
     list-style-type: none;
 }
-
+/**************************************VARIABLES***************************/
 $cd-primary: #9356DC;
 $cd-secondary: #FF79DA;
 $cd-tertiary: #99E2D0;
 $cd-bg-grey: #f7f7f7;
+$section-padding: 36px 20px;
+$menutitles-font: "Shrikhand";
+$menutitles-size: 1.7rem;
+$margin-size: 0;
+
+/***************************************MAP******************************/
 $font-weights: (
     "light": 200,
     "regular":300,
     "medium": 500,
     "bold": 800
 );
-$section-padding: 36px 20px;
-$menutitles-font: "Shrikhand";
-$menutitles-size: 1.7rem;
-$margin-size: 0;
 
-
+/*********************************************HEADER*******************************/
 .header {
     display: flex;
     justify-content: center;
@@ -73,13 +76,15 @@ $margin-size: 0;
     }
 }
 
+/********************************HEADER RESPONSIVE***************************/
+
 @media (min-width: 768px) {
     .header.header--no-shadow {
         padding: 1rem;
     }
 }
 
-
+/***************************************SEARCH****************************/
 .search {
     display: flex;
     justify-content: center;
@@ -109,7 +114,7 @@ $margin-size: 0;
         }
     }
 }
-
+/********************************MAIN TITLE***************************/
 .main-title {
     display: flex;
     flex-direction: column;
@@ -129,7 +134,7 @@ $margin-size: 0;
         margin-bottom: 32px;
     }
 }
-
+/**********BOUTON PURPLE*********/
 .btn-bg {
     display: flex;
     align-items: center;
@@ -154,7 +159,7 @@ $margin-size: 0;
     }
 }
 
-
+/**************************************OPERATION******************************/
 .operation {
     padding: $section-padding;
     display: flex;
@@ -225,6 +230,7 @@ $margin-size: 0;
 
 }
 
+/**************************************OPERATION RESPONSIVE********************/
 @media (min-width: 768px) {
     .operation {
         display: flex;
@@ -243,7 +249,7 @@ $margin-size: 0;
     }
 
 }
-
+/****************************PARTIE RESTAURANTS*************************/
 .restaurants {
     display: flex;
     flex-direction: column;
@@ -341,14 +347,7 @@ $margin-size: 0;
     }
 }
 
-
-
-
-
-
-
-
-
+/**********************************RESTAURANTS RESPONSIVE****************************/
 @media (min-width: 768px) {
     .restaurants {
         display: flex;
@@ -385,7 +384,7 @@ $margin-size: 0;
         }
     }
 }
-
+/***************************************FOOTER*********************************/
 .footer {
     display: flex;
     flex-direction: column;
@@ -414,6 +413,8 @@ $margin-size: 0;
     }
 }
 
+/********************************FOOTER RESPONSIVE**********************************/
+
 @media (min-width: 768px) {
     .footer {
         display: flex;
@@ -438,7 +439,9 @@ $margin-size: 0;
         }
     }
 }
+/***********************************PARTIE MENU PALETTE DU GOÛT**************************/
 
+/**************************************MENU-IMAGE RESPONSIVE****************************/
 @media (min-width: 768px) {
     .menu__image {
         max-height: 24rem;
@@ -461,6 +464,7 @@ $margin-size: 0;
     border-radius: 45px 45px 0 0;
 }
 
+/********************************MENU-WRAPPER RESPONSIVE************************/
 @media (min-width: 768px) {
     .menu-wrapper {
         border-radius: 0;
@@ -552,7 +556,7 @@ $margin-size: 0;
             justify-content: space-evenly;
             gap: 16px;
         }
-
+        /****CARTES MENU*****/
         &__card {
             display: flex;
             align-items: center;
@@ -564,11 +568,13 @@ $margin-size: 0;
             background: #ffff;
             box-shadow: 0px 5px 10px 0px #cfcfcf;
             animation: delay-mode 1s both;
-			@for $i from 1 through 3 {
-				&:nth-child(#{$i}) {
-					animation-delay: 200ms * $i;
-				}
-			}
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 200ms * $i;
+                }
+            }
+
             &__checked {
                 display: flex;
                 align-items: center;
@@ -576,26 +582,27 @@ $margin-size: 0;
                 background: $cd-tertiary;
                 width: 0;
                 opacity: 0;
-                height:5rem;
+                height: 5rem;
                 border-radius: 0 15px 15px 0;
-                font-size: 20px;
                 color: white;
-                overflow: hidden;
                 transition: all 0.5s ease-in-out;
             }
-            &:hover &__checked {
-                opacity: 100%;
-                width: 7rem;
-            }
+
             &__checked i {
                 font-size: 1.5rem;
-                transition: all 0.7s ease;
-                transform: rotate(360°);
             }
-            &:hover i {
-                transform: rotate(0);
-                
+
+            &:hover {
+                .menu__list__card__checked {
+                    opacity: 100%;
+                    width: 5rem;
+                }
+                i {
+                    animation: checkspinn 0.7s ease-in-out;
+                }
+
             }
+
         }
 
         &__content {
@@ -629,7 +636,7 @@ $margin-size: 0;
         }
     }
 }
-
+/****************************ANIMATION*******************/
 @keyframes delay-mode {
     0% {
         transform: translateY(50%);
@@ -643,6 +650,17 @@ $margin-size: 0;
 
 }
 
+@keyframes checkspinn {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+
+}
+/*************************************MENU REPONSIVE**************************/
 @media (min-width: 768px) {
     .menu {
         display: flex;
