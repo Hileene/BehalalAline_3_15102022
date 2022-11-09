@@ -25,6 +25,7 @@ a {
 li {
     list-style-type: none;
 }
+
 /**************************************VARIABLES***************************/
 $cd-primary: #9356DC;
 $cd-secondary: #FF79DA;
@@ -114,6 +115,7 @@ $font-weights: (
         }
     }
 }
+
 /********************************MAIN TITLE***************************/
 .main-title {
     display: flex;
@@ -134,6 +136,7 @@ $font-weights: (
         margin-bottom: 32px;
     }
 }
+
 /**********BOUTON PURPLE*********/
 .btn-bg {
     display: flex;
@@ -194,19 +197,22 @@ $font-weights: (
         background: $cd-bg-grey;
         box-shadow: 0px 5px 10px 0px #cfcfcf;
         transition: background-color 400ms ease-in-out;
+
         i {
             transition: color 400ms ease-in-out;
         }
+
         &:hover {
             background-color: lighten($cd-primary, 35);
+
             i {
-            color: $cd-primary;
+                color: $cd-primary;
             }
         }
 
 
-        
-       
+
+
     }
 
     &__btn__step {
@@ -254,6 +260,7 @@ $font-weights: (
     }
 
 }
+
 /****************************PARTIE RESTAURANTS*************************/
 .restaurants {
     display: flex;
@@ -388,6 +395,7 @@ $font-weights: (
         }
     }
 }
+
 /***************************************FOOTER*********************************/
 .footer {
     display: flex;
@@ -443,14 +451,16 @@ $font-weights: (
         }
     }
 }
+
 /***********************************PARTIE MENU PALETTE DU GOÛT**************************/
 .menu__image {
     height: 70vw;
 }
+
 /**************************************MENU-IMAGE RESPONSIVE****************************/
 @media (min-width: 768px) {
     .menu__image {
-       height: 41vw;
+        height: 41vw;
 
     }
 }
@@ -563,6 +573,7 @@ $font-weights: (
             justify-content: space-evenly;
             gap: 16px;
         }
+
         /****CARTES MENU*****/
         &__card {
             display: flex;
@@ -579,6 +590,53 @@ $font-weights: (
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     animation-delay: 200ms * $i;
+                }
+            }
+
+            &__content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 15px;
+                height: 5rem;
+                width: 100%;
+                position: relative;
+                
+
+
+                &__text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 90%;
+                    overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+                    
+                }
+
+                &__title {
+                    margin-bottom: 0;
+                    width: 100%;
+                    font-size: 16px;
+                    overflow: hidden;
+					text-overflow: ellipsis;
+                }
+
+                &__details {
+                    margin-top: 0;
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: map-get($font-weights, light);
+                    overflow: hidden;
+					text-overflow: ellipsis;
+                }
+
+                &__price {
+                    margin: $margin-size;
+                    margin-top: 28px;
+
                 }
             }
 
@@ -602,10 +660,20 @@ $font-weights: (
             }
 
             &:hover {
+                /*.menu__list__card__content__text {
+					width: 75%;
+				}*/
+				.menu__list__card__content__title {
+					width: 50%;
+				}
+				.menu__list__card__content__details {
+					width: 50%;
+				}
                 .menu__list__card__checked {
                     opacity: 100%;
                     width: 5rem;
                 }
+
                 i {
                     transform: rotate(0);
                 }
@@ -614,39 +682,9 @@ $font-weights: (
 
         }
 
-        &__content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px;
-            height: 5rem;
-            width: 100%;
-            position: relative;
-
-
-            &__text {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            &__title {
-                margin-bottom: 0;
-            }
-
-            &__details {
-                margin-top: 0;
-                font-weight: map-get($font-weights, light);
-            }
-
-            &__price {
-                margin: $margin-size;
-                margin-top: 28px;
-                
-            }
-        }
     }
 }
+
 /****************************KEYFRAMES*******************/
 @keyframes delay-mode {
     0% {
