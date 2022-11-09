@@ -593,52 +593,7 @@ $font-weights: (
                 }
             }
 
-            &__content {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                padding: 15px;
-                height: 5rem;
-                width: 100%;
-                position: relative;
-                
-
-
-                &__text {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    width: 90%;
-                    overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-                    
-                }
-
-                &__title {
-                    margin-bottom: 0;
-                    width: 100%;
-                    font-size: 16px;
-                    overflow: hidden;
-					text-overflow: ellipsis;
-                }
-
-                &__details {
-                    margin-top: 0;
-                    width: 100%;
-                    font-size: 14px;
-                    font-weight: map-get($font-weights, light);
-                    overflow: hidden;
-					text-overflow: ellipsis;
-                }
-
-                &__price {
-                    margin: $margin-size;
-                    margin-top: 28px;
-
-                }
-            }
+           
 
             &__checked {
                 display: flex;
@@ -660,15 +615,6 @@ $font-weights: (
             }
 
             &:hover {
-                /*.menu__list__card__content__text {
-					width: 75%;
-				}*/
-				.menu__list__card__content__title {
-					width: 50%;
-				}
-				.menu__list__card__content__details {
-					width: 50%;
-				}
                 .menu__list__card__checked {
                     opacity: 100%;
                     width: 5rem;
@@ -680,6 +626,46 @@ $font-weights: (
 
             }
 
+        }
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            height: 5rem;
+            width: 100%;
+            position: relative;
+            
+
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 90%;
+                
+            }
+
+            &__title {
+                margin-bottom: 0;
+                width: 100%;
+                font-size: 16px;
+                
+            }
+
+            &__details {
+                margin-top: 0;
+                width: 100%;
+                font-size: 14px;
+                font-weight: map-get($font-weights, light);
+                
+            }
+
+            &__price {
+                margin: $margin-size;
+                margin-top: 28px;
+
+            }
         }
 
     }
