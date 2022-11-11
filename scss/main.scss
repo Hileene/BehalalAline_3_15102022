@@ -4,11 +4,10 @@
 }
 
 body {
-    margin: 0;
+    margin: $margin-size;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
+    @include column;
 }
 
 img {
@@ -36,6 +35,7 @@ $menutitles-font: "Shrikhand";
 $menutitles-size: 1.7rem;
 $margin-size: 0;
 $boxshadow: 0px 5px 10px 0px #cfcfcf;
+$font-size-icons: 2rem;
 
 /*************************************MAP******************************/
 $font-weights: (
@@ -48,7 +48,7 @@ $font-weights: (
 /************************************MIXINS*****************************/
 @mixin heart {
     color: transparent;
-    background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
+    @include gradient;
     background-clip: text;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -65,6 +65,20 @@ $font-weights: (
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin border-radius ($r){
+    border-radius: $r;
+
+}
+
+@mixin gradient {
+    background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
 }
 
 /************************************LOADER*****************************/
@@ -93,7 +107,7 @@ $font-weights: (
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
+        @include border-radius(50%);
 
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) {
@@ -192,7 +206,7 @@ $font-weights: (
     &__return {
         position: absolute;
         left: 2rem;
-        font-size: 2rem;
+        font-size: $font-size-icons;
     }
 
     &__logo {
@@ -215,7 +229,7 @@ $font-weights: (
     background-color: #f0efef;
 
     i {
-        font-size: 2rem;
+        font-size: $font-size-icons;
         margin: 0 0 0.5rem 3.5rem;
     }
 
@@ -263,12 +277,11 @@ $font-weights: (
     width: 220px;
     height: 55px;
     margin: 20px auto;
-    border-radius: 40px;
+    @include border-radius(50px);
     white-space: nowrap;
     cursor: pointer;
     padding: 10px;
-    background: $cd-secondary;
-    background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
+    @include gradient;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all 0.2s ease-in-out;
 
@@ -282,9 +295,8 @@ $font-weights: (
 /**************************************OPERATION******************************/
 .operation {
     padding: $section-padding;
-    display: flex;
+    @include column;
     flex-wrap: wrap;
-    flex-direction: column;
     width: 100%;
 
     &__title {
@@ -309,7 +321,7 @@ $font-weights: (
         height: 5rem;
         margin: 25px 0 0px 12px;
         padding: 25px 0;
-        border-radius: 24px;
+        @include border-radius(24px);
         cursor: pointer;
         background: $cd-bg-grey;
         box-shadow: $boxshadow;
@@ -337,7 +349,7 @@ $font-weights: (
         border: none;
         width: 2rem;
         height: 2rem;
-        border-radius: 50%;
+        @include border-radius(50%);
         position: absolute;
         left: -23px;
         background: $cd-primary;
@@ -378,8 +390,7 @@ $font-weights: (
 
 /****************************PARTIE RESTAURANTS*************************/
 .restaurants {
-    display: flex;
-    flex-direction: column;
+    @include column;
     flex-wrap: wrap;
     width: 100%;
     padding: $section-padding;
@@ -400,7 +411,7 @@ $font-weights: (
 
     &__card {
         margin-top: 20px;
-        border-radius: 20px;
+        @include border-radius(20px);
         width: 100%;
         background: white;
         box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
@@ -423,7 +434,7 @@ $font-weights: (
         color: #166350;
         font-weight: map-get($font-weights, medium);
         padding: 0.7rem 1.5rem;
-        border-radius: 0.3rem;
+        @include border-radius(0.3rem);
         position: absolute;
         top: 1rem;
         right: 1.05rem;
@@ -438,8 +449,7 @@ $font-weights: (
         padding: 0 16px;
 
         &__text {
-            display: flex;
-            flex-direction: column;
+            @include column;
             margin-bottom: 10px;
             gap: 7px;
         }
@@ -453,7 +463,7 @@ $font-weights: (
         }
 
         i {
-            font-size: 2rem;
+            font-size: $font-size-icons;
             position: absolute;
             right: 2rem;
             top: 1rem;
@@ -504,8 +514,7 @@ $font-weights: (
 
 /***************************************FOOTER*********************************/
 .footer {
-    display: flex;
-    flex-direction: column;
+    @include column;
     padding: $section-padding;
     background: #070707c9;
     color: white;
@@ -519,8 +528,7 @@ $font-weights: (
     }
 
     &__nav {
-        display: flex;
-        flex-direction: column;
+        @include column;
         justify-content: space-evenly;
         gap: 15px;
     }
@@ -590,7 +598,7 @@ $font-weights: (
 /********************************MENU-WRAPPER RESPONSIVE************************/
 @media (min-width: 768px) {
     .menu-wrapper {
-        border-radius: 0;
+        @include border-radius(0);
         margin-top: -85px;
         padding: 20px;
     }
@@ -603,8 +611,7 @@ $font-weights: (
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
+    @include column;
     flex-wrap: wrap;
     width: 100%;
 
@@ -622,7 +629,7 @@ $font-weights: (
         }
 
         i {
-            font-size: 2rem;
+            font-size: $font-size-icons;
             position: absolute;
             right: 2rem;
         }
@@ -634,8 +641,7 @@ $font-weights: (
     }
 
     &__list {
-        display: flex;
-        flex-direction: column;
+        @include column;
         flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100%;
@@ -643,8 +649,7 @@ $font-weights: (
         gap: 10px;
 
         &__category {
-            display: flex;
-            flex-direction: column;
+            @include column;
         }
 
         &__title {
@@ -664,9 +669,8 @@ $font-weights: (
         }
 
         &__items {
-            display: flex;
+            @include column;
             flex-wrap: wrap;
-            flex-direction: column;
             justify-content: space-evenly;
             gap: 16px;
         }
@@ -677,7 +681,7 @@ $font-weights: (
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            border-radius: 15px;
+            @include border-radius(15px);
             height: 5rem;
             cursor: pointer;
             background: #ffff;
@@ -735,8 +739,7 @@ $font-weights: (
 
 
             &__text {
-                display: flex;
-                flex-direction: column;
+                @include column;
                 gap: 5px;
                 width: 90%;
 
