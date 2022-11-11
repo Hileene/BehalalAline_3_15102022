@@ -35,8 +35,9 @@ $section-padding: 36px 20px;
 $menutitles-font: "Shrikhand";
 $menutitles-size: 1.7rem;
 $margin-size: 0;
+$boxshadow: 0px 5px 10px 0px #cfcfcf;
 
-/***************************************MAP******************************/
+/*************************************MAP******************************/
 $font-weights: (
     "light": 200,
     "regular":300,
@@ -44,102 +45,125 @@ $font-weights: (
     "bold": 800
 );
 
-/*****************************************LOADER***********************************/
+/************************************MIXINS*****************************/
+@mixin heart {
+    color: transparent;
+    background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+
+}
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/************************************LOADER*****************************/
 .spinner-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: $cd-bg-grey;
-	position: fixed;
-	inset: 0;
-	z-index: 3;
-	animation: fadeaway 1000ms 3000ms linear forwards;
-    
+    @include center;
+    min-height: 100vh;
+    background: $cd-bg-grey;
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    animation: fadeaway 1000ms 3000ms linear forwards;
+
 }
 
 .spinner {
-	position: relative;
-	width: 15rem;
-	height: 15rem;
-	transform-style: preserve-3d;
-	perspective: 800px;
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    transform-style: preserve-3d;
+    perspective: 800px;
 
-	.arc {
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
+    .arc {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
 
-		@for $i from 1 through 3 {
-			&:nth-child(#{$i}) {
-				animation: rotate#{$i} 1.15s linear infinite;
-			}
-		}
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation: rotate#{$i} 1.15s linear infinite;
+            }
+        }
 
-		&:nth-child(1) {
-			animation-delay: -0.8s;
-			border-bottom: 10px solid $cd-primary;
-		}
+        &:nth-child(1) {
+            animation-delay: -0.8s;
+            border-bottom: 10px solid $cd-primary;
+        }
 
-		&:nth-child(2) {
-			animation-delay: -0.4s;
-			border-bottom: 10px solid $cd-secondary;
-		}
+        &:nth-child(2) {
+            animation-delay: -0.4s;
+            border-bottom: 10px solid $cd-secondary;
+        }
 
-		&:nth-child(3) {
-			animation-delay: 0s;
-			border-bottom: 10px solid $cd-tertiary;
-		}
-	}
+        &:nth-child(3) {
+            animation-delay: 0s;
+            border-bottom: 10px solid $cd-tertiary;
+        }
+    }
 }
 
 @keyframes rotate1 {
-	0% {
-		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
-	}
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
+    }
 
-	100% {
-		transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
-	}
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
+    }
 }
 
 @keyframes rotate2 {
-	0% {
-		transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
-	}
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
+    }
 
-	100% {
-		transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
-	}
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
+    }
 }
 
 @keyframes rotate3 {
-	0% {
-		transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
-	}
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
+    }
 
-	100% {
-		transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
-	}
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
+    }
 }
 
 @keyframes fadeaway {
-	0% {
-		transform: translateY(20px);
-		opacity: 1;
-	}
-	85%, 100% {
-		opacity: 0.33;
-	}
+    0% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
 
-	100% {
-		transform: translateY(0);
-		opacity: 0;
-	}
+    85%,
+    100% {
+        opacity: 0.33;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 
@@ -148,7 +172,7 @@ $font-weights: (
     display: flex;
     justify-content: center;
     padding: 2rem;
-    box-shadow: 0px 5px 10px 0px #cfcfcf;
+    box-shadow: $boxshadow;
     position: sticky;
     top: 0;
     background: white;
@@ -186,9 +210,7 @@ $font-weights: (
 
 /***************************************SEARCH****************************/
 .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     height: 4.5rem;
     background-color: #f0efef;
 
@@ -198,7 +220,7 @@ $font-weights: (
     }
 
     input {
-        border:none;
+        border: none;
         background-color: #f0efef;
         width: 250px;
         height: 40px;
@@ -217,11 +239,9 @@ $font-weights: (
 
 /********************************MAIN TITLE***************************/
 .main-title {
-    display: flex;
+    @include center;
     flex-direction: column;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     padding: $section-padding;
     background-color: $cd-bg-grey;
 
@@ -238,9 +258,7 @@ $font-weights: (
 
 /**********BOUTON PURPLE*********/
 .btn-bg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
     color: white;
     width: 220px;
     height: 55px;
@@ -294,7 +312,7 @@ $font-weights: (
         border-radius: 24px;
         cursor: pointer;
         background: $cd-bg-grey;
-        box-shadow: 0px 5px 10px 0px #cfcfcf;
+        box-shadow: $boxshadow;
         transition: background-color 400ms ease-in-out;
 
         i {
@@ -315,9 +333,7 @@ $font-weights: (
     }
 
     &__btn__step {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
         border: none;
         width: 2rem;
         height: 2rem;
@@ -444,16 +460,7 @@ $font-weights: (
         }
 
         .fas {
-            color: transparent;
-            background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
-            background-clip: text;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            cursor: pointer;
-
-            &:hover {
-                opacity: 1;
-            }
+           @include heart;
         }
     }
 }
@@ -621,16 +628,7 @@ $font-weights: (
         }
 
         .fas {
-            color: transparent;
-            background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
-            background-clip: text;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            cursor: pointer;
-
-            &:hover {
-                opacity: 1;
-            }
+           @include heart;
 
         }
     }
@@ -683,7 +681,7 @@ $font-weights: (
             height: 5rem;
             cursor: pointer;
             background: #ffff;
-            box-shadow: 0px 5px 10px 0px #cfcfcf;
+            box-shadow: $boxshadow;
             animation: delay-mode 1s both;
 
             @for $i from 1 through 3 {
@@ -692,12 +690,10 @@ $font-weights: (
                 }
             }
 
-           
+
 
             &__checked {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include center;
                 background: $cd-tertiary;
                 width: 0;
                 opacity: 0;
@@ -726,6 +722,7 @@ $font-weights: (
             }
 
         }
+
         &__content {
             display: flex;
             align-items: center;
@@ -734,7 +731,7 @@ $font-weights: (
             height: 5rem;
             width: 100%;
             position: relative;
-            
+
 
 
             &__text {
@@ -742,14 +739,14 @@ $font-weights: (
                 flex-direction: column;
                 gap: 5px;
                 width: 90%;
-                
+
             }
 
             &__title {
                 margin-bottom: 0;
                 width: 100%;
                 font-size: 16px;
-                
+
             }
 
             &__details {
@@ -757,7 +754,7 @@ $font-weights: (
                 width: 100%;
                 font-size: 14px;
                 font-weight: map-get($font-weights, light);
-                
+
             }
 
             &__price {
