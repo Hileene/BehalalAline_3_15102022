@@ -4,10 +4,11 @@
 }
 
 body {
-    margin: $margin-size;
+    margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    @include column;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -80,6 +81,7 @@ $font-weights: (
     display: flex;
     flex-direction: column;
 }
+
 
 /************************************LOADER*****************************/
 .spinner-container {
@@ -763,6 +765,7 @@ $font-weights: (
             &__price {
                 margin: $margin-size;
                 margin-top: 28px;
+                font-weight: map-get($font-weights, bold );
 
             }
         }
