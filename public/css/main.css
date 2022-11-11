@@ -52,8 +52,8 @@ li {
   position: fixed;
   inset: 0;
   z-index: 3;
-  -webkit-animation: fade 3000ms linear forwards;
-          animation: fade 3000ms linear forwards;
+  -webkit-animation: fade 1000ms 3000ms linear forwards;
+          animation: fade 1000ms 3000ms linear forwards;
 }
 
 .spinner {
@@ -165,31 +165,31 @@ li {
 }
 @-webkit-keyframes fade {
   0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 1;
   }
   85%, 100% {
     opacity: 0.33;
   }
   100% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0;
   }
 }
 @keyframes fade {
   0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 1;
   }
   85%, 100% {
     opacity: 0.33;
   }
   100% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0;
   }
 }
