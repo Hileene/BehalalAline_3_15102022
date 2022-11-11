@@ -54,7 +54,7 @@ $font-weights: (
 	position: fixed;
 	inset: 0;
 	z-index: 3;
-	animation: fade 1000ms 3000ms linear forwards;
+	animation: fadeaway 1000ms 3000ms linear forwards;
     
 }
 
@@ -127,7 +127,7 @@ $font-weights: (
 	}
 }
 
-@keyframes fade {
+@keyframes fadeaway {
 	0% {
 		transform: translateY(20px);
 		opacity: 1;

@@ -52,8 +52,8 @@ li {
   position: fixed;
   inset: 0;
   z-index: 3;
-  -webkit-animation: fade 1000ms 3000ms linear forwards;
-          animation: fade 1000ms 3000ms linear forwards;
+  -webkit-animation: fadeaway 1000ms 3000ms linear forwards;
+          animation: fadeaway 1000ms 3000ms linear forwards;
 }
 
 .spinner {
@@ -163,7 +163,7 @@ li {
             transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
   }
 }
-@-webkit-keyframes fade {
+@-webkit-keyframes fadeaway {
   0% {
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
@@ -178,7 +178,7 @@ li {
     opacity: 0;
   }
 }
-@keyframes fade {
+@keyframes fadeaway {
   0% {
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
