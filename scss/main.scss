@@ -537,7 +537,11 @@ $font-weights: (
 
     &__links {
         display: flex;
-        gap: 1rem
+        gap: 1rem;
+        cursor: pointer;
+        &:hover {
+            color: $cd-tertiary;
+        }
     }
 }
 

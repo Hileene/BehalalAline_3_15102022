@@ -661,6 +661,10 @@ li {
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
+  cursor: pointer;
+}
+.footer__links:hover {
+  color: #99E2D0;
 }
 
 /********************************FOOTER RESPONSIVE**********************************/
