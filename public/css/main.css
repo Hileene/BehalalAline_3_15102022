@@ -974,12 +974,6 @@ li {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
-.menu__list__card:active .menu__list__card__content__text__title {
-  width: 78%;
-}
-.menu__list__card:active .menu__list__card__content__text__title__details {
-  width: 78%;
-}
 .menu__list__card:active .menu__list__card__checked {
   opacity: 100%;
   -webkit-box-flex: 0.3;
@@ -991,12 +985,6 @@ li {
           transform: rotate(0);
 }
 @media screen and (min-width: 1280px) {
-  .menu__list__card:hover .menu__list__card__content__text__title {
-    width: 78%;
-  }
-  .menu__list__card:hover .menu__list__card__content__text__title__details {
-    width: 78%;
-  }
   .menu__list__card:hover .menu__list__card__checked {
     opacity: 100%;
     -webkit-box-flex: 0.3;

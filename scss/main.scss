@@ -765,13 +765,6 @@ $breakpoints: (
             }
 
             &:active {
-                .menu__list__card__content__text__title {
-                    width: 78%;
-
-                    &__details {
-                        width: 78%;
-                    }
-                }
 
                 .menu__list__card__checked {
                     opacity: 100%;
@@ -786,13 +779,6 @@ $breakpoints: (
 
             @include desktop-only {
                 &:hover {
-                    .menu__list__card__content__text__title {
-                        width: 78%;
-
-                        &__details {
-                            width: 78%;
-                        }
-                    }
 
                     .menu__list__card__checked {
                         opacity: 100%;
