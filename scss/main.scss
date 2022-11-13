@@ -87,6 +87,18 @@ $breakpoints: (
     flex-direction: column;
 }
 
+@mixin ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-wrap: break-Word;
+    overflow: hidden;
+    /*  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;*/
+}
+
 @mixin tablette-only {
     @media screen and (min-width: map-get($breakpoints, tablette)) {
         @content;
@@ -574,6 +586,7 @@ $breakpoints: (
     @include column;
     flex-wrap: wrap;
     width: 100%;
+
     &__header {
         display: flex;
         align-items: center;
@@ -706,16 +719,14 @@ $breakpoints: (
                     display: block;
                     gap: 5px;
                     width: 90%;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    
+
 
                     &__title {
                         margin-bottom: 0;
                         width: 100%;
                         font-size: 16px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                        @include ellipsis;
+
 
                     }
 
@@ -724,8 +735,7 @@ $breakpoints: (
                         width: 100%;
                         font-size: 14px;
                         font-weight: map-get($font-weights, light);
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                        @include ellipsis;
                     }
                 }
 
@@ -754,14 +764,15 @@ $breakpoints: (
                 transform: rotate(-180deg);
             }
 
-            &:hover {
+            &:active {
                 .menu__list__card__content__text__title {
                     width: 78%;
+
                     &__details {
                         width: 78%;
                     }
                 }
-                
+
                 .menu__list__card__checked {
                     opacity: 100%;
                     flex: 0.3;
@@ -771,6 +782,28 @@ $breakpoints: (
                     transform: rotate(0);
                 }
 
+            }
+
+            @include desktop-only {
+                &:hover {
+                    .menu__list__card__content__text__title {
+                        width: 78%;
+
+                        &__details {
+                            width: 78%;
+                        }
+                    }
+
+                    .menu__list__card__checked {
+                        opacity: 100%;
+                        flex: 0.3;
+                    }
+
+                    i {
+                        transform: rotate(0);
+                    }
+
+                }
             }
 
         }
