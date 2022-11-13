@@ -907,8 +907,13 @@ li {
   position: relative;
 }
 .menu__list__card__content__text {
-  /*@include column;*/
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 5px;
   width: 90%;
 }

@@ -715,8 +715,7 @@ $breakpoints: (
                 position: relative;
 
                 &__text {
-                    /*@include column;*/
-                    display: block;
+                    @include column;
                     gap: 5px;
                     width: 90%;
 
