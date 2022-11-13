@@ -224,7 +224,7 @@ $breakpoints: (
     background: white;
     z-index: 1;
 
-    &.header--no-shadow {
+    &.header--menu-pages {
         box-shadow: none;
 
         @include tablette-only {
