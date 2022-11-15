@@ -1,7 +1,6 @@
 # Projet 3 du parcours développeur Web Openclassooms:  Dynamisez un site Web avec des animations CSS
 
-
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
+![Ohmyfood logo](../../../../../../../../../C:/Users/lineb/Documents/Documents/Documents/OPENCLASSROOMS/PROJET%203/BehalalAline_3_15102022/images/logo/ohmyfood.png)
 
 Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
 utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
