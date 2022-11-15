@@ -10,7 +10,7 @@ restaurants car leur menu est préparé à l’avance. Plus de perte de temps à
 ## Compétences évaluées
 
 
-## Ojectifs
+## Objectifs
 ## Technologies
 
 
