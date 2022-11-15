@@ -93,10 +93,7 @@ $breakpoints: (
     -webkit-line-clamp: 1;
     word-wrap: break-Word;
     overflow: hidden;
-    /*  text-overflow: ellipsis;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;*/
+  
 }
 
 @mixin tablette-only {
