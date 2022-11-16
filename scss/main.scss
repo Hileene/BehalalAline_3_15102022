@@ -34,7 +34,8 @@ li {
 
 /************************************MIXINS*****************************/
 @import "./Utils/mixins";
-
+/*********************************KEYFRAMES*****************************/
+@import "./Utils/keyframes";
 /************************************LOADER*****************************/
 .spinner-container {
     @include center;
@@ -85,55 +86,6 @@ li {
         }
     }
 }
-
-@keyframes rotate1 {
-    0% {
-        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
-    }
-
-    100% {
-        transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
-    }
-}
-
-@keyframes rotate2 {
-    0% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
-    }
-
-    100% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
-    }
-}
-
-@keyframes rotate3 {
-    0% {
-        transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
-    }
-
-    100% {
-        transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
-    }
-}
-
-@keyframes fadeaway {
-    0% {
-        transform: translateY(20px);
-        opacity: 1;
-    }
-
-    85%,
-    100% {
-        opacity: 0.33;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
 
 /*****************************************HEADER**********************************/
 .header {
@@ -714,16 +666,4 @@ li {
     }
 }
 
-/****************************KEYFRAMES*******************/
-@keyframes delay-mode {
-    0% {
-        transform: translateY(50%);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-}
