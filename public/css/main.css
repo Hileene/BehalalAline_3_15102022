@@ -926,6 +926,10 @@ li {
   -webkit-line-clamp: 1;
   word-wrap: break-Word;
   overflow: hidden;
+  /* alternative à la formule: 
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis*/
 }
 .menu__list__card__content__text__details {
   margin-top: 0;
@@ -937,6 +941,10 @@ li {
   -webkit-line-clamp: 1;
   word-wrap: break-Word;
   overflow: hidden;
+  /* alternative à la formule: 
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis*/
 }
 .menu__list__card__content__price {
   margin: 0;
