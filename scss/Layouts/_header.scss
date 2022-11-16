@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: $boxshadow;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+
+    &.header--menu-pages {
+        box-shadow: none;
+
+        @include tablette-only {
+            padding: 1rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    &__return {
+        position: absolute;
+        left: 2rem;
+        font-size: $font-size-icons;
+    }
+
+    &__logo {
+        width: 200px;
+    }
+}
