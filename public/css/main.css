@@ -898,7 +898,6 @@ li {
           justify-content: space-between;
   padding: 15px;
   height: 5rem;
-  /*width: 100%;*/
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
