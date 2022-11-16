@@ -1,0 +1,59 @@
+@mixin heart {
+    color: transparent;
+    @include gradient;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+
+}
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border-radius ($r) {
+    border-radius: $r;
+
+}
+
+@mixin gradient {
+    background: linear-gradient(162deg, $cd-secondary 0%, $cd-primary 100%);
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-wrap: break-Word;
+    overflow: hidden;
+  /* alternative à la formule: 
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis*/
+}
+
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
