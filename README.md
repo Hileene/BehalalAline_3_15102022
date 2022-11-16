@@ -1,7 +1,5 @@
 # Projet 3 du parcours développeur Web Openclassooms:  Dynamisez un site Web avec des animations CSS
 
-![Ohmyfood logo](../../../../../../../../../C:/Users/lineb/Documents/Documents/Documents/OPENCLASSROOMS/PROJET%203/BehalalAline_3_15102022/images/logo/ohmyfood.png)
-
 Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
 utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
 restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !
@@ -36,8 +34,6 @@ restaurants car leur menu est préparé à l’avance. Plus de perte de temps à
   Chrome et Firefox.
 
 ## Livrables
-
-### Contenu des pages
 #### Page d’accueil (x1)
 - Affichage de la localisation des restaurants. À terme il sera possible de choisir sa
   localisation pour trouver des restaurants proches d’un certain lieu.
