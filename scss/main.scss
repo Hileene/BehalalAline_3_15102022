@@ -19,23 +19,7 @@
 @import "./Components/search";
 
 /********************************MAIN TITLE***************************/
-.main-title {
-    @include center;
-    flex-direction: column;
-    text-align: center;
-    padding: $section-padding;
-    background-color: $cd-bg-grey;
-
-    &_intro h1 {
-        font-size: 28px;
-    }
-
-    &__intro-plus {
-        font-size: 18px;
-        font-weight: map-get($font-weights, light);
-        margin-bottom: 32px;
-    }
-}
+@import "./Layouts/main-title";
 
 /***********************************PURPLE BUTTON*******************************/
 @import "./Components/btn-purple";
