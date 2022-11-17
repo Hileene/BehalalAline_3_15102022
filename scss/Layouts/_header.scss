@@ -11,7 +11,7 @@
     &.header--menu-pages {
         box-shadow: none;
 
-        @include tablette-only {
+        @include tablet-only {
             padding: 1rem;
         }
     }

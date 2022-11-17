@@ -5,7 +5,7 @@
     color: white;
     font-weight: map-get($font-weights, medium);
 
-    @include tablette-only {
+    @include tablet-only {
         align-items: center;
         width: 100%;
     }
@@ -16,7 +16,7 @@
         margin: $margin-size;
         margin-bottom: 30px;
 
-        @include tablette-only {
+        @include tablet-only {
             font-size: 2.5rem;
         }
     }
@@ -26,7 +26,7 @@
         justify-content: space-evenly;
         gap: 15px;
 
-        @include tablette-only {
+        @include tablet-only {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;

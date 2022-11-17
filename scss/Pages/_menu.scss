@@ -1,7 +1,7 @@
 .menu__image {
     height: 70vw;
 
-    @include tablette-only {
+    @include tablet-only {
         height: 41vw;
     }
 
@@ -18,7 +18,7 @@
     background-color: $cd-bg-grey;
     border-radius: 45px 45px 0 0;
 
-    @include tablette-only {
+    @include tablet-only {
         @include border-radius(0);
         margin-top: -85px;
         padding: 20px;
@@ -41,7 +41,7 @@
         position: relative;
         margin: 0px 0 20px 0;
 
-        @include tablette-only {
+        @include tablet-only {
             margin: 20px 0 20px 0;
             justify-content: center;
         }
@@ -51,7 +51,7 @@
             font-size: $menutitles-size;
             margin: $margin-size;
 
-            @include tablette-only {
+            @include tablet-only {
                 font-size: 2.4rem;
             }
         }
@@ -61,7 +61,7 @@
             position: absolute;
             right: 0rem;
 
-            @include tablette-only {
+            @include tablet-only {
                 right: 1rem;
             }
 
@@ -85,7 +85,7 @@
         margin-bottom: 16px;
         gap: 10px;
 
-        @include tablette-only {
+        @include tablet-only {
             flex-direction: row;
             justify-content: space-between;
         }
@@ -93,7 +93,7 @@
         &__category {
             @include column;
 
-            @include tablette-only {
+            @include tablet-only {
                 width: 49%;
             }
 
@@ -117,7 +117,7 @@
                 left: 0;
             }
 
-            @include tablette-only {
+            @include tablet-only {
                 margin-bottom: 15px;
             }
         }
