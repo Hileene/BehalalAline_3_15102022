@@ -1,0 +1,20 @@
+.btn-bg {
+    @include center;
+    color: white;
+    width: 220px;
+    height: 55px;
+    margin: 20px auto;
+    @include border-radius(50px);
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 10px;
+    @include gradient;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        filter: brightness(1.1);
+        box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.3);
+        opacity: 0.9;
+    }
+}
