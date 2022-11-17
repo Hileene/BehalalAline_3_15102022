@@ -767,7 +767,7 @@ li {
 .menu__header i {
   font-size: 2rem;
   position: absolute;
-  right: 2rem;
+  right: 0rem;
 }
 @media screen and (min-width: 768px) {
   .menu__header i {
